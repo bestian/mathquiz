@@ -20,6 +20,6 @@ loop = do x <- rollDice
           else
              return ()
 
-main = do putStrLn "Welcome!"
+main = do putStrLn "Welcome to Math Quiz!"
           loop
 --          putStrLn (show ans)
