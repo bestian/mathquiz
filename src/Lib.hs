@@ -1,3 +1,9 @@
+module Lib
+    ( Quiz (Lit, Op), Ops (Add, Sub, Mul), show, eval, 
+      rollDice, rollDice2, rollOp
+    ) where
+
+
 import System.Random 
 
 data Quiz = Lit Int | Op Ops Quiz Quiz
@@ -30,15 +36,3 @@ rollDice2 = do x <- getStdRandom (randomR (1,10))
 rollOp :: IO Ops
 rollOp = do k <- getStdRandom (randomR (0,2))
             return $ [Add, Sub, Mul] !! k
-
-main = do x <- rollDice
-          y <- rollDice2
-          o <- rollOp
---          putStrLn $ show o
-          q <- return $ Op o x y
-          ans <- return $ eval q
-          putStrLn (show q ++ " = ?")
-          myA <- getLine
-          let a = (read myA) :: Int
-          print $ ans == a
---          putStrLn (show ans)

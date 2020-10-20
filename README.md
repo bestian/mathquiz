@@ -1,2 +1,1 @@
 # mathquiz
-math quiz generator
