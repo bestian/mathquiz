@@ -2,11 +2,12 @@ module Main where
 
 import Lib
 
-loop = do x <- rollDice
+loop = do b <- rollDice
+          x <- rollDice
           y <- rollDice2
           o <- rollOp
 --          putStrLn $ show o
-          q <- return $ Op o x y
+          q <- return $ Op Add b (Op o x y)
           ans <- return $ eval q
           putStrLn (show q ++ " = ?")
           myA <- getLine
