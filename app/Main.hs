@@ -2,7 +2,7 @@ module Main where
 
 import Lib
 
-main = do x <- rollDice
+loop = do x <- rollDice
           y <- rollDice2
           o <- rollOp
 --          putStrLn $ show o
@@ -11,5 +11,15 @@ main = do x <- rollDice
           putStrLn (show q ++ " = ?")
           myA <- getLine
           let a = (read myA) :: Int
-          print $ ans == a
+          if ans == a
+             then print "Geart!"
+          else
+             print "Wrong!"
+          if ans == a
+             then loop
+          else
+             return ()
+
+main = do putStrLn "Welcome!"
+          loop
 --          putStrLn (show ans)
