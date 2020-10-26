@@ -32,7 +32,7 @@ loop l s = do b <- rollDice
                     main
 
 main = do putStrLn "歡迎來到數學小測驗！Welcome to Math Quiz!"
-          putStrLn "Choose a level: 0)加法1 1)加法2 or 2)減法 or 3)乘法 or 4)綜合"
+          putStrLn "Choose a level: 0)加法一 1)加法二 or 2)減法 or 3)乘法 or 4)綜合"
           myA <- getLine
           let a = (read myA) :: Int
           loop a 0
