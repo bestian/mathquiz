@@ -1,6 +1,6 @@
 module Lib
     ( Quiz (Lit, Op), Ops (Add, Sub, Mul), show, eval, 
-      rollDice, rollDice2, rollOp
+      rollDice, rollDice2, rollDice3, rollOp, rollOp2
     ) where
 
 
@@ -28,11 +28,18 @@ rollDice :: IO Quiz
 rollDice = do x <- getStdRandom (randomR (10,20))
               return $ Lit x
 
-
 rollDice2 :: IO Quiz
 rollDice2 = do x <- getStdRandom (randomR (1,10))
+               return $ Lit x
+
+rollDice3 :: IO Quiz
+rollDice3 = do x <- getStdRandom (randomR (-10,10))
                return $ Lit x
 
 rollOp :: IO Ops
 rollOp = do k <- getStdRandom (randomR (0,2))
             return $ [Add, Sub, Mul] !! k
+
+rollOp2 :: IO Ops
+rollOp2 = do k <- getStdRandom (randomR (0,1))
+             return $ [Add, Sub] !! k
