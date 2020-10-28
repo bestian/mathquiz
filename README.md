@@ -10,7 +10,7 @@ a math quiz generator
 
 2. clone this repo
 
-[this repo]()
+[this repo](https://github.com/bestian/mathquiz)
 
 3.
 * ``` stack install ```
