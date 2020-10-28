@@ -14,4 +14,4 @@ a math quiz generator
 
 3.
 * ``` stack install ```
-* ``` stack build ```
+* ``` stack run ```
