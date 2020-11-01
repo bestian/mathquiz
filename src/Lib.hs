@@ -11,7 +11,8 @@ data Ops = Add | Sub | Mul
 
 instance Show Quiz where 
   show (Lit a) = show a
-  show (Op o a b) = "(" ++ show a ++ show o ++ show b ++ ")"
+  show (Op o (Lit a) (Lit b)) = show a ++ show o ++ show b
+  show (Op o a b) = "(" ++ show a ++ ")" ++ show o ++ "(" ++ show b ++ ")" 
 
 instance Show Ops where
   show Add = "+"
