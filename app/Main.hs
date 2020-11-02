@@ -31,7 +31,6 @@ loop l s = do b <- rollDice
               z2 <- rollDice3
               o <- rollOp
               o2 <- rollOp2
---             putStrLn $ show o
               q <- getQ b x y y2 z z2 o o2 l
               ans <- return $ eval q
               putStrLn (show q ++ " = ?")
@@ -48,8 +47,9 @@ loop l s = do b <- rollDice
                  do putStrLn $ "答錯了，沒關係，再接再勵。答案是" ++ show ans
                     main
 
-main = do putStrLn "歡迎來到數學小測驗！Welcome to Math Quiz!"
-          putStrLn "Choose a level: 0]加法一 1]加法二 2]減法 3]乘法 4]綜合 5]負數加減"
+main = do putStrLn "歡迎來到數學小測驗！"
+          putStrLn "選擇一項: "
+          putStrLn "0]加法一 1]加法二 2]減法 3]乘法 4]綜合 5]負數加減"
           myA <- getLine
           let a = (read myA) :: Int
           txt <- makeTxt a 10 ""
