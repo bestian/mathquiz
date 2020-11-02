@@ -17,9 +17,9 @@ instance Show Quiz where
   show (Op o a b) = "(" ++ show a ++ ")" ++ show o ++ "(" ++ show b ++ ")" 
 
 instance Show Ops where
-  show Add = "+"
-  show Sub = "-"
-  show Mul = "x"
+  show Add = " + "
+  show Sub = " - "
+  show Mul = " x "
 
 eval :: Quiz -> Int
 eval (Lit x) = x
