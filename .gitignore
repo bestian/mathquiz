@@ -2,3 +2,4 @@
 *.txt
 *~
 dist-newstyle/
+.DS_Store
