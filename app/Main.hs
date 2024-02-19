@@ -38,7 +38,7 @@ loop l s e = do b <- rollDice
                 myA <- getLine
                 let a = (read myA) :: Int
                 if ans == a
-                   then do putStrLn $ "答對了！Geart!"
+                   then do putStrLn $ "答對了！Great!"
                            putStrLn $ "目前分數：" ++ show (s+1)
                            if s + 1 >= 10
                              then do putStrLn $ "你勝利了！\n\n"
