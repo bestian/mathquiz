@@ -11,9 +11,9 @@ version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/bestian/mathquiz#readme>
 homepage:       https://github.com/githubuser/mathquiz#readme
 bug-reports:    https://github.com/githubuser/mathquiz/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+author:         Bestian Tang
+maintainer:     support@bestian.tw
+copyright:      Bestian Tang
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
